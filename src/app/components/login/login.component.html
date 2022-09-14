@@ -1,0 +1,18 @@
+<div class="contenedor">
+    <div class="formulario">
+        <h1>Login</h1>
+        <form [formGroup]="loginForm" (ngSubmit)="login()">
+            <div>
+                <!--<label>Usuario</label>-->
+                <input formControlName="name" type="text" placeholder="Usuario">
+            </div>
+            <div>
+                <!--<label>Contraseña</label>-->
+                <input formControlName="password" type="password" placeholder="Contraseña">
+            </div>
+            <button>Login</button>
+        </form>
+        <a routerLink="/signup">Registrase</a>
+    </div>
+</div>
+<app-footer></app-footer>

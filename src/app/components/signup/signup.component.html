@@ -1,0 +1,26 @@
+<div class="contenedor">
+    <div class="formulario">
+        <h1>Registrase</h1>
+        <form [formGroup]="signupFrom" (ngSubmit)="signUp()">
+            <div>
+                <!--<label>Nombre</label>-->
+                <input formControlName="name" type="text" placeholder="Nombre">
+            </div>
+            <div>
+                <!--<label >Categoria</label>-->
+                <input formControlName="category" type="text" placeholder="Categoria">
+            </div>
+            <div>
+                <!--<label>compañia</label>-->
+                <input formControlName="company" type="text" placeholder="Compañia">
+            </div>
+            <div>
+                <!--<label >Contraseña</label>-->
+                <input formControlName="password" type="password" placeholder="Contraseña">
+            </div>
+            <button type="submit" class="btn btn-primary">Sign Up</button>
+        </form>
+        <a routerLink="/login">Iniciar sesión</a>
+    </div>
+</div>
+<app-footer></app-footer>

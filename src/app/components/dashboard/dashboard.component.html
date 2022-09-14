@@ -1,0 +1,75 @@
+<header>
+    <div class="contenedor-header">
+        <h1>Angular CRUD</h1>
+        <div class="contenedor-boton">
+            <a class="add" (click)="clickAddEmploy()" data-bs-toggle="modal" data-bs-target="#exampleModal">Añadir empleado</a>
+            <a routerLink="/login" class="logout">Cerra sesión</a>
+        </div>
+    </div>
+</header>
+
+<div class="contenedor-tabla">
+    <table class="tabla">
+        <thead class="tabla-header">
+            <tr>
+                <th scope="col">id</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Categoria</th>
+                <th scope="col">Compañia</th>
+                <th scope="col">Nivel de felicidad</th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody class="tabla-body">
+            <tr *ngFor="let row of employData">
+                <td>{{row.id}}</td>
+                <td>{{row.name}}</td>
+                <td>{{row.category}}</td>
+                <td>{{row.company}}</td>
+                <td>{{row.levelOfHappiness}}</td>
+                <td>
+                    <a (click)="onEdit(row)" style="margin-right: 10px;" type="button" class="edit" data-bs-toggle="modal" data-bs-target="#exampleModal">Editar</a>
+                    <a (click)="deleteEmploy(row)" class="erase">Borrar</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Detalles de empleado</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form [formGroup]="formValue">
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Nombre</label>
+                    <input type="text" formControlName="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nombre">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Categoria</label>
+                    <input type="text" formControlName="category" class="form-control" id="exampleInputPassword1" placeholder="Categoria">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Compañia</label>
+                    <input type="text" formControlName="company" class="form-control" id="exampleInputPassword1" placeholder="Compañia">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Nivel de felicidad</label>
+                    <input type="number" formControlName="levelOfHappiness" class="form-control" id="exampleInputPassword1" placeholder="level of happiness">
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button type="button" id="cancel" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            <button type="button" *ngIf="showAdd" (click)="postEmployDetails()" class="btn btn-primary">Añadir</button>
+            <button type="button" *ngIf="showUpdate" (click)="updateEmployDetails()" class="btn btn-primary">actualizar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <app-footer></app-footer>

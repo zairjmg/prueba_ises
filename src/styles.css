@@ -1,1 +1,140 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #212025;
+}
+
+.container-bg {
+    max-width: 1200px;
+    height: 600px;
+    margin: auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+
+.triangle {
+    width: 250px;
+    height: 250px;
+    background: red;
+    position: absolute;
+}
+
+.triangle1 {
+    width: 250px;
+    height: 250px;
+    background: linear-gradient(to left, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+    right: 100px;
+    top: 100px;
+    animation: t1 9s ease infinite;
+    -webkit-animation: t1 9s ease infinite;
+}
+
+.triangle2 {
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(to left bottom, #c879ff, #72a7ff, #00c9ff, #00e2ff, #3bf4fb);
+    top: 350px;
+    animation: t2 6s ease infinite;
+    -webkit-animation: t2 6s ease infinite;
+}
+
+.triangle3 {
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(to top, #161032, #52184b, #921b4e, #c6383b, #e06d06);
+    left: 200px;
+    animation: t3 7s ease infinite;
+    -webkit-animation: t3 7s ease infinite;
+}
+
+@keyframes t1 {
+    0% {
+        transform: translateY(0px) rotate(45deg);
+        -webkit-transform: translateY(0px) rotate(45deg);
+        -moz-transform: translateY(0px) rotate(45deg);
+        -ms-transform: translateY(0px) rotate(45deg);
+        -o-transform: translateY(0px) rotate(45deg);
+    }
+
+        50% {
+            transform: translateY(20px) rotate(35deg);
+            -webkit-transform: translateY(20px) rotate(35deg);
+            -moz-transform: translateY(20px) rotate(35deg);
+            -ms-transform: translateY(20px) rotate(35deg);
+            -o-transform: translateY(20px) rotate(35deg);
+    }
+
+        100% {
+            transform: translateY(0px) rotate(45deg);
+            -webkit-transform: translateY(0px) rotate(45deg);
+            -moz-transform: translateY(0px) rotate(45deg);
+            -ms-transform: translateY(0px) rotate(45deg);
+            -o-transform: translateY(0px) rotate(45deg);
+    }
+}
+
+@keyframes t2 {
+    0% {
+        transform: translateY(0px) rotate(65deg);
+        -webkit-transform: translateY(0px) rotate(65deg);
+        -moz-transform: translateY(0px) rotate(65deg);
+        -ms-transform: translateY(0px) rotate(65deg);
+        -o-transform: translateY(0px) rotate(65deg);
+    }
+
+        50% {
+            transform: translateY(20px) rotate(45deg);
+            -webkit-transform: translateY(20px) rotate(45deg);
+            -moz-transform: translateY(20px) rotate(45deg);
+            -ms-transform: translateY(20px) rotate(45deg);
+            -o-transform: translateY(20px) rotate(45deg);
+    }
+
+        100% {
+            transform: translateY(0px) rotate(65deg);
+            -webkit-transform: translateY(0px) rotate(65deg);
+            -moz-transform: translateY(0px) rotate(65deg);
+            -ms-transform: translateY(0px) rotate(65deg);
+            -o-transform: translateY(0px) rotate(65deg);
+    }
+}
+
+@keyframes t3 {
+    0% {
+        transform: translateY(0px) rotate(45deg);
+        -webkit-transform: translateY(0px) rotate(45deg);
+        -moz-transform: translateY(0px) rotate(45deg);
+        -ms-transform: translateY(0px) rotate(45deg);
+        -o-transform: translateY(0px) rotate(45deg);
+    }
+
+        50% {
+            transform: translateY(20px) rotate(65deg);
+            -webkit-transform: translateY(20px) rotate(65deg);
+            -moz-transform: translateY(20px) rotate(65deg);
+            -ms-transform: translateY(20px) rotate(65deg);
+            -o-transform: translateY(20px) rotate(65deg);
+    }
+
+        100% {
+            transform: translateY(0px) rotate(45deg);
+            -webkit-transform: translateY(0px) rotate(45deg);
+            -moz-transform: translateY(0px) rotate(45deg);
+            -ms-transform: translateY(0px) rotate(45deg);
+            -o-transform: translateY(0px) rotate(45deg);
+    }
+}
